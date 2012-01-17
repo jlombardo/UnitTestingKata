@@ -11,6 +11,7 @@ public class Person {
         return lastName;
     }
 
+    // Needs validation and testing because parameter could be invalid
     public void setLastName(String lastName) {
         if(lastName == null || lastName.length() == 0) {
             throw new IllegalArgumentException("lastName cannot be null or empty");
@@ -21,5 +22,10 @@ public class Person {
         }
     }
     
+    // Does not need testing because nothing can go wrong!
+    @Override
+    public String toString() {
+        return lastName;
+    }
 
 }
